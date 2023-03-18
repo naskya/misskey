@@ -22,9 +22,9 @@
 				<template #label>{{ i18n.ts.tags }}</template>
 				<template #caption>{{ i18n.ts.setMultipleBySeparatingWithSpace }}</template>
 			</MkInput>
-			<MkInput v-model="license">
+			<MkTextarea v-model="license">
 				<template #label>{{ i18n.ts.license }}</template>
-			</MkInput>
+			</MkTextarea>
 			<MkButton danger @click="del()"><i class="ti ti-trash"></i> {{ i18n.ts.delete }}</MkButton>
 		</div>
 	</MkSpacer>
@@ -36,6 +36,7 @@ import { } from 'vue';
 import MkModalWindow from '@/components/MkModalWindow.vue';
 import MkButton from '@/components/MkButton.vue';
 import MkInput from '@/components/MkInput.vue';
+import MkTextarea from '@/components/MkTextarea.vue';
 import * as os from '@/os';
 import { i18n } from '@/i18n';
 import { customEmojiCategories } from '@/custom-emojis';
