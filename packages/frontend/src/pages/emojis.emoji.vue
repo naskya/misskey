@@ -35,13 +35,13 @@ function menu(ev) {
 			os.success();
 		},
 	}, {
-		text: i18n.ts.info,
+		text: i18n.ts.license,
 		icon: 'ti ti-info-circle',
 		action: () => {
 			os.apiGet('emoji', { name: props.emoji.name }).then(res => {
 				os.alert({
 					type: 'info',
-					text: `License: ${res.license}`,
+					text: `${res.license}`,
 				});
 			});
 		},
